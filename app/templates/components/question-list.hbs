@@ -1,0 +1,7 @@
+<h5>Click to answer any question:</h5>
+
+<ul>
+ {{#each model as |question|}}
+ <li>{{#link-to 'question' question.id}}{{question.title}}{{/link-to}}<cite>  -  {{question.author}}</cite></li>
+ {{/each}}
+</ul>

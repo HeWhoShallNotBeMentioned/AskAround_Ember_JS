@@ -1,1 +1,9 @@
-{{outlet}}
+<div><br>
+  
+  <cite>Submitted by:  {{model.author}}</cite>
+<h3>{{model.title}}</h3>
+
+<br>{{model.note}}
+</div>
+{{answer-list model=model}}
+{{new-answer addAnswer="addAnswer"}}
