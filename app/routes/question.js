@@ -14,18 +14,34 @@ export default Ember.Route.extend({
       thisQuestion.save();
       this.transitionTo('question');
     },
-    deleteQuestion(model) {
+    deleteQuestion(question) {
       var _this = this;
-      var answer_deletions = model.get('answers').
-      then(function(answers){
+      question.get('answers').then(function(answers){
+        console.log("before loop: " + answers.get('length') + " answers.");
+        var counter = 1;
         answers.forEach(function(answer) {
+          console.log("Time through forEach loop: " + counter);
+          console.log("Deleting " + answer.get('answer'));
           answer.destroyRecord();
+          console.log("end of " + counter + " time through loop: " + question.get('answers.length') + " answers.");
+          counter++;
         });
-      }).
-      then(function(){
-        model.destroyRecord();
+      }).then(function() {
+        debugger;
+        question.destroyRecord();
         _this.transitionTo('index');
       });
+    },
+    updateQuestion(questionParams, params) {
+
+      Object.keys(params).forEach(function(key) {
+
+        if(params[key] != undefined) {
+          questionParams.set(key,params[key]);
+        }
+      });
+      questionParams.save();
+      this.transitionTo('question', questionParams)
     }
   }
 });

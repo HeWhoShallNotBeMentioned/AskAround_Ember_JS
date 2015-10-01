@@ -1,0 +1,19 @@
+<div>
+  <h5>Update Question:</h5>
+  <form>
+    <div class="form-group">
+      <label for="title">Your Question:</label>
+      {{input value=title id="title"}}
+    </div>
+    <div class="form-group">
+      <label for="author">Your Name:</label>
+      {{input value=author id="author"}}
+    </div>
+    <div class="form-group">
+      <label for="note">Further Detail:</label>
+      {{input value=note id="note"}}
+    </div>
+    <button {{action 'updateQuestion' questionParams}}>Update Question</button>
+  </form>
+
+</div>

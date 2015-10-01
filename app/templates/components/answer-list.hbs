@@ -1,5 +1,5 @@
 <ul>
 {{#each model.answers as |answer|}}
-<li>{{answer.answer}} - <cite>{{answer.author}}</cite></li>
+<li>{{answer.answer}} - <cite>{{answer.author}}  -  {{format-date answer.date}}</cite></li>
 {{/each}}
 </ul>
