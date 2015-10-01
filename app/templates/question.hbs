@@ -1,9 +1,10 @@
 <div><br>
-  
+
   <cite>Submitted by:  {{model.author}}</cite>
 <h3>{{model.title}}</h3>
 
 <br>{{model.note}}
 </div>
+<button {{action 'deleteQuestion' model}}>Delete Question</button>
 {{answer-list model=model}}
 {{new-answer addAnswer="addAnswer"}}

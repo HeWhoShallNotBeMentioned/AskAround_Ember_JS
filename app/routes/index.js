@@ -5,7 +5,7 @@ export default Ember.Route.extend({
     return this.store.findAll('question');
   },
   actions: {
-    addQuestion(params) {
+    parentQuestion(params) {
       var newQuestion = this.store.createRecord('question', params);
       newQuestion.save();
       this.transitionTo("index");
