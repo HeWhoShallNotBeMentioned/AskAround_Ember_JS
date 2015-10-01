@@ -6,7 +6,7 @@
 <br>{{model.note}}
 </div>
 
-<button {{action 'deleteQuestion' model}}>Delete Question</button>
+<button class="btn btn-danger"{{action 'deleteQuestion' model}}>Delete Question</button>
 {{answer-list model=model}}
 {{new-answer addAnswer="addAnswer"}}
 {{update-question updateQuestion='updateQuestion' questionParams=model}}
