@@ -1,12 +1,13 @@
 # Ask-around
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+By Chris Underwood (and Terry Marr)
+
+The program functions as a basic question and answer web application.
 
 ## Prerequisites
 
 You will need the following things properly installed on your computer.
-
+  NPM
 * [Git](http://git-scm.com/)
 * [Node.js](http://nodejs.org/) (with NPM)
 * [Bower](http://bower.io/)
@@ -36,12 +37,16 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 ### Building
 
-* `ember build` (development)
-* `ember build --environment production` (production)
+* `ember build` (1.13.8)
+*
 
 ### Deploying
 
-Specify what it takes to deploy your app.
+  Ember CLI
+ Node 0.12.4
+ NPM 2.13.4
+
+ run npm install and bower install after downloading, with in the top       directory of this app. Then run ember server at the command line. The application should come up on http://localhostL4200
 
 ## Further Reading / Useful Links
 
@@ -50,4 +55,3 @@ Specify what it takes to deploy your app.
 * Development Browser Extensions
   * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
   * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
-
